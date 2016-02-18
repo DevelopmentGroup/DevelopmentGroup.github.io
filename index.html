@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>Tracker Jacker</title>
+  <meta name="description" content="A minimalist Github Issues Tracker">
+  <meta name="author" content="SitePoint">
+
+  <!-- jQuery JS over a CDN -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+  <!-- Bootstrap JS and CSS over a CDN -->
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" integrity="sha256-7s5uDGW3AHqw6xtJmNNtr+OBRJUlgkNJEo78P4b0yRw= sha512-nNo+yCHEyn0smMxSswnf/OnX6/KwJuZTlNZBjauKhTK0c+zT+q5JOCx0UFhXQ6rJR9jg6Es8gPuD2uZcYDLqSw==" crossorigin="anonymous">
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha256-KXn5puMvxCw+dAYznun+drMdG1IFl3agK0p/pqT9KAo= sha512-2e8qq0ETcfWRI4HJBzQiA3UoyFk6tbNyG+qSaIBZLyW9Xf3sWZHN/lxe9fTh1U45DpPf07yj94KsUHHWe4Yk1A==" crossorigin="anonymous"></script>
+
+  <link rel="stylesheet" href="css/custom.css">
+  <!--[if lt IE 9]>
+  <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+</head>
+
+<body>
+
+  <div class="row" style="width:100%">
+    <div class="col-md-2">
+      <form>
+        <!-- <input type="reset"> -->
+        <!-- <input type="submit"> -->
+        </br>
+        </br>
+        <div style="width:80%;margin-left:auto;margin-right:auto">
+          <br><br>
+          <h5>Repository Owner</h5>
+          <div class="row" style="padding:none; margin:none">
+            <div class="col-sm-10">
+              <input class="form-control" type="text" placeholder="Repository Owner" id="input-owner" onblur="validateGithubUsername()">
+            </div>
+            <div class="col-sm-2" style="padding:none; margin:none">
+              <img id="valid-user-icon" src="./images/blank.gif" width="16px" height="16px">
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm-10">
+              <h5>Repository Name</h5>
+              <input class="form-control" type="text" placeholder="Repository Name" id="input-repo-name">
+            </div>
+          </div>
+          </br>
+          </br>
+          <!-- <a href="#"><div width="50%" style="border:1px solid red" onclick="submitTargetRepo()">Track</div></a> -->
+          <div width="90%" style="text-align:right"><a class="btn btn-default" onclick="submitTargetRepo()" href="#" role="button">Track</a></div>
+          <br><br><br><br><br>
+          <div style="text-align:center" id='page-number'>&nbsp;</div><br>
+          <div style="text-align:center;display:none" id="page-buttons">
+            <a class="btn btn-default" id="back-button"  onclick="getPreviousIssues()" href="#" role="button">Back</a>
+            <a class="btn btn-default" id="next-button" onclick="getNextIssues()" href="#" role="button">Next</a>
+          </div>
+        </div>
+      </form>
+    </div>
+    <div class="col-md-8">
+      <h1>TRACKER JACKER</h1>
+      <br><br>
+      <div>
+        <br><br>
+        <div id="issues-list"/></div>
+      </div>
+    </div>
+    <div class="col-md-2">
+      <div id = "repo-name"></div>
+      <br>
+      <div id = "repo-image"></div>
+      <br>
+      <div id = "open-issues"></div>
+      <br>
+      <div id = "watched"></div>
+      <br>
+      <div id = "starred"></div>
+      <br>
+      <div id = "forked"></div>
+
+    </div>
+  </div>
+  
+
+  
+
+
+
+  <script src="js/main.js"></script>
+</body>
+
+</html>
